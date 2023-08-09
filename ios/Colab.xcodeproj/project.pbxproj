@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* ColabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ColabTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-Colab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Colab.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		7699B88040F8A987B510C191 /* libPods-Colab-ColabTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Colab-ColabTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9B616E83E20E47D59350B9A6 /* Geologica-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3DC180A14FADB5491978 /* Geologica-Medium.ttf */; };
+		3AE80E35B90D4BF5AA24D195 /* Geologica-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CBD297459CD454D9C306A5E /* Geologica-Regular.ttf */; };
+		CDCC6B01F29B417098386B53 /* Geologica-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F01C5AD70624FD6AA2E2D2C /* Geologica-Bold.ttf */; };
+		3809F94831014323A48A377F /* Geologica-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76E00E39620940A9882872DF /* Geologica-SemiBold.ttf */; };
+		DEDAFAAC04A54C8984029D4B /* Geologica-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243095D8165A4497AB0BF28F /* Geologica-Black.ttf */; };
+		30371F2EDA0B4FF39D011BC7 /* Geologica-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 292FA20879A64328A6021CA5 /* Geologica-ExtraBold.ttf */; };
+		53E390C7042044A19B9611CF /* Geologica-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20786A68843D470EAB3460CB /* Geologica-ExtraLight.ttf */; };
+		D880BB5F5B3D4562B7874B69 /* Geologica-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9889FB62A6D04E0285C961CC /* Geologica-Light.ttf */; };
+		CC774DF2F7C3467C8DF37DAD /* Geologica-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E58F4BF332740919C55B85C /* Geologica-Thin.ttf */; };
+		FF622A5DE0D9495D98195133 /* Geologica_Auto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46F47179FC0A425CB0D57CC7 /* Geologica_Auto-Black.ttf */; };
+		DA415A560A9F4D54BACCD279 /* Geologica_Auto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BB3C218715B44A08FD57BF6 /* Geologica_Auto-Bold.ttf */; };
+		72F797D49D8542F18C5453D0 /* Geologica_Auto-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00ABE7E27DB64DFA9D73B49D /* Geologica_Auto-ExtraBold.ttf */; };
+		BF1BEDCD2D2946A3976F2EC0 /* Geologica_Auto-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10921FC8BCD34C4DB1AD8210 /* Geologica_Auto-ExtraLight.ttf */; };
+		0B0E86B0942545FBAA3F6674 /* Geologica_Auto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7ADDAD13E494B4387773B82 /* Geologica_Auto-Light.ttf */; };
+		6EAAEBDC5DA449BA8B0F0C10 /* Geologica_Auto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5802DB9F9AAE445590D51B61 /* Geologica_Auto-Medium.ttf */; };
+		8D9A48C550A742BBB7FFE4A6 /* Geologica_Auto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49832B0BABB64D29BA415CEE /* Geologica_Auto-Regular.ttf */; };
+		6B543EF1086946EF813FAFFA /* Geologica_Auto-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFD45FA55AA64FAEA0C2389C /* Geologica_Auto-SemiBold.ttf */; };
+		89B916221DD6433DBC1BC345 /* Geologica_Auto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7422B4C9A82452A8C13FFC9 /* Geologica_Auto-Thin.ttf */; };
+		C163CB85918A49DCAFAE5630 /* Geologica_Cursive-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5B9B2F9BC7E47AE81F1CC8B /* Geologica_Cursive-Black.ttf */; };
+		DB81B91FD9C14390AB45BD91 /* Geologica_Cursive-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59D3CD49551F48509FC14003 /* Geologica_Cursive-Bold.ttf */; };
+		85A0DD898CB94B719E3368B3 /* Geologica_Cursive-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 699C1DFEFE4B46EB97288844 /* Geologica_Cursive-ExtraBold.ttf */; };
+		7BFBB5D46EF24DF6A35DCBEA /* Geologica_Cursive-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 640C318243B04279872755F7 /* Geologica_Cursive-ExtraLight.ttf */; };
+		09BFD52FBBFA407D97326CD4 /* Geologica_Cursive-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B68B7F0B3A74DC58B3490BB /* Geologica_Cursive-Light.ttf */; };
+		DDCC1520D8E1470F9ED750A8 /* Geologica_Cursive-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA89E0B322474DB29EEC64 /* Geologica_Cursive-Medium.ttf */; };
+		75E541BAFFA047CEA641D1F7 /* Geologica_Cursive-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF723D9945B40C2BF9501B3 /* Geologica_Cursive-Regular.ttf */; };
+		FA42E2FC01DB4ED2A708406E /* Geologica_Cursive-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFDA008366B348808E5CBB67 /* Geologica_Cursive-SemiBold.ttf */; };
+		C7927899E803457DBDABFA80 /* Geologica_Cursive-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39581D92805047BE824C1843 /* Geologica_Cursive-Thin.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = Colab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* ColabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ColabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColabTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Colab/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Colab/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Colab/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Colab/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Colab/main.m; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Colab-ColabTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Colab-ColabTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-Colab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab.debug.xcconfig"; path = "Target Support Files/Pods-Colab/Pods-Colab.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-Colab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab.release.xcconfig"; path = "Target Support Files/Pods-Colab/Pods-Colab.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-Colab-ColabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab-ColabTests.debug.xcconfig"; path = "Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-Colab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Colab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Colab/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-Colab-ColabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab-ColabTests.release.xcconfig"; path = "Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		AEEF3DC180A14FADB5491978 /* Geologica-Medium.ttf */ = {isa = PBXFileReference; name = "Geologica-Medium.ttf"; path = "../Source/assets/Fonts/Geologica-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0CBD297459CD454D9C306A5E /* Geologica-Regular.ttf */ = {isa = PBXFileReference; name = "Geologica-Regular.ttf"; path = "../Source/assets/Fonts/Geologica-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8F01C5AD70624FD6AA2E2D2C /* Geologica-Bold.ttf */ = {isa = PBXFileReference; name = "Geologica-Bold.ttf"; path = "../Source/assets/Fonts/Geologica-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		76E00E39620940A9882872DF /* Geologica-SemiBold.ttf */ = {isa = PBXFileReference; name = "Geologica-SemiBold.ttf"; path = "../Source/assets/Fonts/Geologica-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		243095D8165A4497AB0BF28F /* Geologica-Black.ttf */ = {isa = PBXFileReference; name = "Geologica-Black.ttf"; path = "../Source/assets/Fonts/Geologica-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		292FA20879A64328A6021CA5 /* Geologica-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Geologica-ExtraBold.ttf"; path = "../Source/assets/Fonts/Geologica-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		20786A68843D470EAB3460CB /* Geologica-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Geologica-ExtraLight.ttf"; path = "../Source/assets/Fonts/Geologica-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9889FB62A6D04E0285C961CC /* Geologica-Light.ttf */ = {isa = PBXFileReference; name = "Geologica-Light.ttf"; path = "../Source/assets/Fonts/Geologica-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9E58F4BF332740919C55B85C /* Geologica-Thin.ttf */ = {isa = PBXFileReference; name = "Geologica-Thin.ttf"; path = "../Source/assets/Fonts/Geologica-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		46F47179FC0A425CB0D57CC7 /* Geologica_Auto-Black.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-Black.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7BB3C218715B44A08FD57BF6 /* Geologica_Auto-Bold.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-Bold.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		00ABE7E27DB64DFA9D73B49D /* Geologica_Auto-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-ExtraBold.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		10921FC8BCD34C4DB1AD8210 /* Geologica_Auto-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-ExtraLight.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C7ADDAD13E494B4387773B82 /* Geologica_Auto-Light.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-Light.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5802DB9F9AAE445590D51B61 /* Geologica_Auto-Medium.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-Medium.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		49832B0BABB64D29BA415CEE /* Geologica_Auto-Regular.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-Regular.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BFD45FA55AA64FAEA0C2389C /* Geologica_Auto-SemiBold.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-SemiBold.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7422B4C9A82452A8C13FFC9 /* Geologica_Auto-Thin.ttf */ = {isa = PBXFileReference; name = "Geologica_Auto-Thin.ttf"; path = "../Source/assets/Fonts/Geologica_Auto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D5B9B2F9BC7E47AE81F1CC8B /* Geologica_Cursive-Black.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-Black.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		59D3CD49551F48509FC14003 /* Geologica_Cursive-Bold.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-Bold.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		699C1DFEFE4B46EB97288844 /* Geologica_Cursive-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-ExtraBold.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		640C318243B04279872755F7 /* Geologica_Cursive-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-ExtraLight.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7B68B7F0B3A74DC58B3490BB /* Geologica_Cursive-Light.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-Light.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8FEA89E0B322474DB29EEC64 /* Geologica_Cursive-Medium.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-Medium.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FFF723D9945B40C2BF9501B3 /* Geologica_Cursive-Regular.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-Regular.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DFDA008366B348808E5CBB67 /* Geologica_Cursive-SemiBold.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-SemiBold.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		39581D92805047BE824C1843 /* Geologica_Cursive-Thin.ttf */ = {isa = PBXFileReference; name = "Geologica_Cursive-Thin.ttf"; path = "../Source/assets/Fonts/Geologica_Cursive-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7699B88040F8A987B510C191 /* libPods-Colab-ColabTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C80B921A6F3F58F76C31292 /* libPods-Colab.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* ColabTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* ColabTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = ColabTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* Colab */ = {
+			isa = PBXGroup;
+			children = (
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = Colab;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-Colab.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-Colab-ColabTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* Colab */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* ColabTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				7B732AE0F399489A9BD2E53A /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Colab.app */,
+				00E356EE1AD99517003FC87E /* ColabTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-Colab.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-Colab.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-Colab-ColabTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-Colab-ColabTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7B732AE0F399489A9BD2E53A /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				AEEF3DC180A14FADB5491978 /* Geologica-Medium.ttf */,
+				0CBD297459CD454D9C306A5E /* Geologica-Regular.ttf */,
+				8F01C5AD70624FD6AA2E2D2C /* Geologica-Bold.ttf */,
+				76E00E39620940A9882872DF /* Geologica-SemiBold.ttf */,
+				243095D8165A4497AB0BF28F /* Geologica-Black.ttf */,
+				292FA20879A64328A6021CA5 /* Geologica-ExtraBold.ttf */,
+				20786A68843D470EAB3460CB /* Geologica-ExtraLight.ttf */,
+				9889FB62A6D04E0285C961CC /* Geologica-Light.ttf */,
+				9E58F4BF332740919C55B85C /* Geologica-Thin.ttf */,
+				46F47179FC0A425CB0D57CC7 /* Geologica_Auto-Black.ttf */,
+				7BB3C218715B44A08FD57BF6 /* Geologica_Auto-Bold.ttf */,
+				00ABE7E27DB64DFA9D73B49D /* Geologica_Auto-ExtraBold.ttf */,
+				10921FC8BCD34C4DB1AD8210 /* Geologica_Auto-ExtraLight.ttf */,
+				C7ADDAD13E494B4387773B82 /* Geologica_Auto-Light.ttf */,
+				5802DB9F9AAE445590D51B61 /* Geologica_Auto-Medium.ttf */,
+				49832B0BABB64D29BA415CEE /* Geologica_Auto-Regular.ttf */,
+				BFD45FA55AA64FAEA0C2389C /* Geologica_Auto-SemiBold.ttf */,
+				E7422B4C9A82452A8C13FFC9 /* Geologica_Auto-Thin.ttf */,
+				D5B9B2F9BC7E47AE81F1CC8B /* Geologica_Cursive-Black.ttf */,
+				59D3CD49551F48509FC14003 /* Geologica_Cursive-Bold.ttf */,
+				699C1DFEFE4B46EB97288844 /* Geologica_Cursive-ExtraBold.ttf */,
+				640C318243B04279872755F7 /* Geologica_Cursive-ExtraLight.ttf */,
+				7B68B7F0B3A74DC58B3490BB /* Geologica_Cursive-Light.ttf */,
+				8FEA89E0B322474DB29EEC64 /* Geologica_Cursive-Medium.ttf */,
+				FFF723D9945B40C2BF9501B3 /* Geologica_Cursive-Regular.ttf */,
+				DFDA008366B348808E5CBB67 /* Geologica_Cursive-SemiBold.ttf */,
+				39581D92805047BE824C1843 /* Geologica_Cursive-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* ColabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ColabTests" */;
+			buildPhases = (
+				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
+				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = ColabTests;
+			productName = ColabTests;
+			productReference = 00E356EE1AD99517003FC87E /* ColabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* Colab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Colab" */;
+			buildPhases = (
+				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
+				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Colab;
+			productName = Colab;
+			productReference = 13B07F961A680F5B00A75B9A /* Colab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Colab" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* Colab */,
+				00E356ED1AD99517003FC87E /* ColabTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				9B616E83E20E47D59350B9A6 /* Geologica-Medium.ttf in Resources */,
+				3AE80E35B90D4BF5AA24D195 /* Geologica-Regular.ttf in Resources */,
+				CDCC6B01F29B417098386B53 /* Geologica-Bold.ttf in Resources */,
+				3809F94831014323A48A377F /* Geologica-SemiBold.ttf in Resources */,
+				DEDAFAAC04A54C8984029D4B /* Geologica-Black.ttf in Resources */,
+				30371F2EDA0B4FF39D011BC7 /* Geologica-ExtraBold.ttf in Resources */,
+				53E390C7042044A19B9611CF /* Geologica-ExtraLight.ttf in Resources */,
+				D880BB5F5B3D4562B7874B69 /* Geologica-Light.ttf in Resources */,
+				CC774DF2F7C3467C8DF37DAD /* Geologica-Thin.ttf in Resources */,
+				FF622A5DE0D9495D98195133 /* Geologica_Auto-Black.ttf in Resources */,
+				DA415A560A9F4D54BACCD279 /* Geologica_Auto-Bold.ttf in Resources */,
+				72F797D49D8542F18C5453D0 /* Geologica_Auto-ExtraBold.ttf in Resources */,
+				BF1BEDCD2D2946A3976F2EC0 /* Geologica_Auto-ExtraLight.ttf in Resources */,
+				0B0E86B0942545FBAA3F6674 /* Geologica_Auto-Light.ttf in Resources */,
+				6EAAEBDC5DA449BA8B0F0C10 /* Geologica_Auto-Medium.ttf in Resources */,
+				8D9A48C550A742BBB7FFE4A6 /* Geologica_Auto-Regular.ttf in Resources */,
+				6B543EF1086946EF813FAFFA /* Geologica_Auto-SemiBold.ttf in Resources */,
+				89B916221DD6433DBC1BC345 /* Geologica_Auto-Thin.ttf in Resources */,
+				C163CB85918A49DCAFAE5630 /* Geologica_Cursive-Black.ttf in Resources */,
+				DB81B91FD9C14390AB45BD91 /* Geologica_Cursive-Bold.ttf in Resources */,
+				85A0DD898CB94B719E3368B3 /* Geologica_Cursive-ExtraBold.ttf in Resources */,
+				7BFBB5D46EF24DF6A35DCBEA /* Geologica_Cursive-ExtraLight.ttf in Resources */,
+				09BFD52FBBFA407D97326CD4 /* Geologica_Cursive-Light.ttf in Resources */,
+				DDCC1520D8E1470F9ED750A8 /* Geologica_Cursive-Medium.ttf in Resources */,
+				75E541BAFFA047CEA641D1F7 /* Geologica_Cursive-Regular.ttf in Resources */,
+				FA42E2FC01DB4ED2A708406E /* Geologica_Cursive-SemiBold.ttf in Resources */,
+				C7927899E803457DBDABFA80 /* Geologica_Cursive-Thin.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Colab-ColabTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Colab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Colab-ColabTests/Pods-Colab-ColabTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* ColabTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* Colab */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Colab-ColabTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ColabTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Colab.app/Colab";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Colab-ColabTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = ColabTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Colab.app/Colab";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Colab.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Colab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Colab;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Colab.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Colab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Colab;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ColabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Colab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Colab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
