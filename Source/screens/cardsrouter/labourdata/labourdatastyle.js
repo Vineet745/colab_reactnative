@@ -12,7 +12,10 @@ export default labourdatastyle = StyleSheet.create({
         borderRadius:moderateScale(10),
         backgroundColor:"white",
         justifyContent:"center",
-        paddingHorizontal:horizontalScale(10),
+        paddingHorizontal:horizontalScale(15),
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"space-between"
     },
     calendartext:{
         fontFamily:"Geologica-Medium",

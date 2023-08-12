@@ -11,31 +11,32 @@ import {snagstyle} from './snagstyle';
 import BottomTester from '../../../Components/bottomsheet/Bottomsheet';
 import Calendarmodal from '../../../Components/calendarmodal/Calendarmodal';
 import {useDispatch, useSelector} from 'react-redux';
-import { modalvalue } from '../../../redux/slice/modalslice';
-import { calendardata } from '../../../redux/slice/calendarslice';
+import {modalvalue} from '../../../redux/slice/modalslice';
+import {calendardata} from '../../../redux/slice/calendarslice';
 import Locationcomponent from '../../../Components/helpers/locationcomponent/Locationcomponent';
+import { moderateScale } from '../../../assets/Dimension';
+import Button from '../../../Components/helpers/buttoncomponent/Button';
 
 const Snag = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const {location} = useSelector(state => state.location);
-  const {calendardate} = useSelector(state=>state.calendar)
-console.log(calendardate)
-  
+
   const mixedarray = location.join('/');
-  console.log(location.join('/'));
 
   const currentDate = new Date();
 
   const [bottom, setbottom] = useState(false);
   const [calendarsheet, setCalendarsheet] = useState(false);
+
+  
   // BottomSheet button
   const togglebutton = () => {
-    dispatch(modalvalue(!bottom))
+    dispatch(modalvalue(!bottom));
   };
 
   //Calendar sheet button
   const calendarbutton = () => {
-    dispatch(calendardata(!calendarsheet))
+    dispatch(calendardata(!calendarsheet));
   };
 
   // Top CheckBox
@@ -109,9 +110,23 @@ console.log(calendardate)
           </View>
 
           {/* kdkljflkdjfdl */}
-          <Locationcomponent togglebutton={togglebutton} title={mixedarray ? mixedarray : 'Select Activity Head'}/>
-          <Locationcomponent togglebutton={togglebutton}  title='Select Activity Head'/>
-          
+          <View style={{marginBottom:moderateScale(10)}}>
+          <Locationcomponent
+            togglebutton={togglebutton}
+            title={mixedarray ? mixedarray : 'Select Location'}
+            color={'#8c8c8c'}
+            backgroundColor={"white"}
+          />
+          </View>
+          <View style={{marginBottom:moderateScale(10)}}>
+          <Locationcomponent
+            togglebutton={togglebutton}
+            title="Select Activity Head"
+            color={'#8c8c8c'}
+            backgroundColor={"white"}
+          />
+          </View>
+
           <TouchableOpacity>
             <View style={snagstyle.contractorname}>
               <Text style={snagstyle.contractnametextone}>Contractor Name</Text>
@@ -140,14 +155,7 @@ console.log(calendardate)
           <View style={snagstyle.AmountView}>
             <View style={snagstyle.boxodd}>
               <Text style={snagstyle.oddboxtext}>Debit to</Text>
-              <TouchableOpacity
-                // onPress={togglebutton}
-                style={snagstyle.boxdropdown}>
-                <Text style={snagstyle.dropingtext}>Select</Text>
-                <Image
-                  source={require('../../../assets/Images/dropdownlist.png')}
-                />
-              </TouchableOpacity>
+              <Locationcomponent title="Select" backgroundColor={"#f4f6f9"} color={"black"}/>
             </View>
             <View style={snagstyle.boxeven}>
               <Text style={snagstyle.oddboxtext}>Debit Amount</Text>
@@ -159,14 +167,7 @@ console.log(calendardate)
             </View>
             <View style={snagstyle.boxodd}>
               <Text style={snagstyle.oddboxtext}>Snag Assigned To</Text>
-              <TouchableOpacity
-                // onPress={togglebutton}
-                style={snagstyle.boxdropdown}>
-                <Text style={snagstyle.dropingtext}>Select</Text>
-                <Image
-                  source={require('../../../assets/Images/dropdownlist.png')}
-                />
-              </TouchableOpacity>
+              <Locationcomponent title="Select" backgroundColor={"#f4f6f9"} color={"black"}/>
             </View>
             <View style={snagstyle.boxeven}>
               <Text style={snagstyle.oddboxtext}>Due Date</Text>
@@ -202,14 +203,7 @@ console.log(calendardate)
             ))}
           </View>
 
-          <View style={snagstyle.profilebuttons}>
-            <TouchableOpacity style={snagstyle.editbutton}>
-              <Text style={snagstyle.editbuttontext}>Save as Draft</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={snagstyle.switchbutton}>
-              <Text style={snagstyle.editbuttontext}>Save</Text>
-            </TouchableOpacity>
-          </View>
+          <Button/>
         </View>
       </ScrollView>
       <BottomTester />

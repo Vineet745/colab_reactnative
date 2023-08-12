@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native'
 const Additionbtn = () => {
     const {navigate} = useNavigation()
   return (
-    <TouchableOpacity onPress={()=>navigate('homestack',{screen:"AreaofConcern"})} style={{position:"absolute",bottom:moderateScale(40),right:moderateScale(30)}}>
+    <TouchableOpacity onPress={()=>navigate('homestack',{screen:"Area of concern"})} style={{position:"absolute",bottom:moderateScale(40),right:moderateScale(30)}}>
         <Image style={{width:55,height:55}}  source={require('../../../assets/Images/Add-bottom.png')}/>
         </TouchableOpacity>
   )

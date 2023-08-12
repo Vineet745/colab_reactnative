@@ -26,14 +26,15 @@ const CalendarView = () => {
       }}
       onDayPress={day => {
         setSelected(day.dateString);
-        console.log(day.dateString)
       }}
 
       markedDates={{
         [selected]: {selected: true, disableTouchEvent: false, selectedDotColor: 'orange'}
       }}
+      
     />
   );
+  
 }
 
 export default CalendarView

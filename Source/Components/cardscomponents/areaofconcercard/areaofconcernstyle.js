@@ -7,6 +7,9 @@ export default concernstyle = StyleSheet.create({
         borderRadius:moderateScale(9),
         backgroundColor:"white",
         paddingBottom:verticalScale(12),
+        marginVertical:verticalScale(8),
+        overflow:"hidden",
+        elevation:1
     },
     statusview:{
         paddingVertical:verticalScale(8),

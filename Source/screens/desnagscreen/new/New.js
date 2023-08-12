@@ -7,7 +7,7 @@ const New = () => {
   return (
     <View style={{
       paddingHorizontal: horizontalScale(20),
-      marginTop:verticalScale(20)
+      marginTop:verticalScale(12)
       }}>
         <ScrollView showsVerticalScrollIndicator={false}>
       <Desnagcard />

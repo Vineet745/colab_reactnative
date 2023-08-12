@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { cardcompsheetstyle } from './cardcompsheet'
 import Searchbar from '../../../utils/Searchbar'
@@ -7,6 +7,7 @@ import { horizontalScale } from '../../../assets/Dimension'
 const Cardcomponent = () => {
   return (
     <View style={{flex:1}}>
+        <TouchableOpacity>
         <View style={cardcompsheetstyle.cardmain}>
             <View style={cardcompsheetstyle.cardmaintop}>
                 <View style={cardcompsheetstyle.cardmaintopleft}>
@@ -32,6 +33,7 @@ const Cardcomponent = () => {
                 
             </View>
         </View>
+        </TouchableOpacity>
     </View>
   )
 }

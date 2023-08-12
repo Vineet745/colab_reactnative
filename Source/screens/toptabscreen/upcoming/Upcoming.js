@@ -7,8 +7,8 @@ import Progressdatacard from '../../../Components/cardscomponents/progressdataup
 
 const Upcoming = () => {
   return (
-    <View style={{flex:1,marginTop:verticalScale(15),padding:moderateScale(20),backgroundColor:"#f4f6f8"}}>
-    <Searchbar/>
+    <View style={{flex:1,padding:moderateScale(20),backgroundColor:"#f4f6f8"}}>
+      <Searchbar/>
     <ScrollView showsVerticalScrollIndicator={false}>
       <Progressdatacard/>
       <Progressdatacard/>

@@ -10,7 +10,7 @@ import Additionbtn from '../../../Components/cardscomponents/areaofconcercard/Ad
 const Read = () => {
     const {navigate} = useNavigation()
   return (
-    <View style={{flex:1,marginTop:verticalScale(15),paddingHorizontal:horizontalScale(15),paddingVertical:verticalScale(10)}}>
+    <View style={{flex:1,paddingHorizontal:horizontalScale(15),paddingVertical:verticalScale(15),backgroundColor:"#fbfbfb"}}>
         <ScrollView showsVerticalScrollIndicator={false} >
         <Areaofconcerncard/>
         <Areaofconcerncard/>

@@ -144,20 +144,15 @@ export const snagstyle = StyleSheet.create({
   },
   AmountView: {
     paddingVertical: verticalScale(10),
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
     borderRadius: moderateScale(10),
     marginTop: 10,
-    flexWrap: 'wrap',
   },
   boxodd: {
-    width: horizontalScale(175),
     backgroundColor: 'white',
     padding: 10,
     borderRadius: moderateScale(10),
-    margin: moderateScale(5),
     elevation: 2,
+    marginBottom:verticalScale(12)
   },
 
   oddboxtext: {
@@ -187,11 +182,12 @@ export const snagstyle = StyleSheet.create({
     justifyContent: 'center',
   },
   boxeven: {
-    width: horizontalScale(155),
     backgroundColor: 'white',
     padding: 10,
     borderRadius: moderateScale(10),
     elevation: 2,
+    marginBottom:verticalScale(12)
+
   },
   inputbox: {
     paddingLeft: 10,

@@ -69,9 +69,7 @@ const Areaofconcern = () => {
           <Text style={areastylesheet.submitbtntext}>Submit</Text>
         </TouchableOpacity>
       </View>
-      <View>
         <BottomTester  />
-      </View>
     </View>
   );
 };

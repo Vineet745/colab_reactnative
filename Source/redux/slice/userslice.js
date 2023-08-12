@@ -10,8 +10,8 @@ const userSlice = createSlice({
         loginuser:(state,action)=>{
             state.token = action.payload
         },
-        logoutuser:(state,action)=>{
-            state.token = action.payload
+        logoutuser:(state)=>{
+            state.token = ''
         }
     }
 })

@@ -1,9 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, Text,TouchableOpacity } from 'react-native'
 import React from 'react'
 import concernstyle from "./areaofconcernstyle"
+import { useNavigation } from '@react-navigation/native'
+
 const Areaofconcerncard = () => {
+  const {navigate} = useNavigation()
   return (
     <View style={concernstyle.concernmain}>
+      <TouchableOpacity onPress={()=>navigate('homestack',{screen:"Area of Concern Detail"})}>
       <View style={concernstyle.statusview}>
         <Text style={concernstyle.statusviewtext}>Approval</Text>
       </View>
@@ -27,6 +31,7 @@ const Areaofconcerncard = () => {
        </View>
      </View>
       </View>
+      </TouchableOpacity>
     </View>
   )
 }

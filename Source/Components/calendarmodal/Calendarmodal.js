@@ -9,22 +9,21 @@ import {calendardata} from '../../redux/slice/calendarslice';
 
 const Calendarmodal = () => {
   const {calendarvisible} = useSelector(state => state.calendar);
-  console.log('calendarvisible', calendarvisible);
   const dispatch = useDispatch();
-  const [selected, setSelected] = useState(null);
 
-  const handleDateSelect = date => {
-    setSelected(date);
-    dispatch(calendardata(selected));
-  };
+
+  const closecalendar = ()=>{
+    dispatch(calendardata(false))
+  }
 
   return (
     <Modal coverScreen={false} isVisible={calendarvisible}>
       <View style={calendarmodalstyle.calendarmodalmain}>
-        <CalendarView />
+        <CalendarView  />
         <TouchableOpacity
           style={{marginBottom: 5}}
-          onPress={() => dispatch(calendardata(!selected))}>
+          onPress={()=>closecalendar()}
+          >
           <Text
             style={{fontFamily: 'Geologica-Bold', color: 'red', fontSize: 15}}>
             Cancel
@@ -32,7 +31,8 @@ const Calendarmodal = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={{marginBottom: 10}}
-          onPress={() => dispatch(calendardata(!selected))}>
+          onPress={()=>handleDateSelect()}
+          >
           <Text
             style={{
               fontFamily: 'Geologica-Bold',

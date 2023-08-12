@@ -32,11 +32,15 @@ import Areaofconcern from '../../screens/cardsrouter/areaofconcern/Areaofconcern
 import Areaofconcerncard from '../cardscomponents/areaofconcercard/Areaofconcerncard';
 import Hindrance from '../../screens/cardsrouter/hindrance/Hindrance';
 import Open from '../../screens/qualitychecklistscreen/Open/Open';
-import { Badge } from 'react-native-elements';
+import {Badge} from 'react-native-elements';
 import PWR from '../../screens/newprogressinnerscreen/pwr/PWR';
 import Misc from '../../screens/newprogressinnerscreen/misc/Misc';
 import Laboursupply from '../../screens/newprogressinnerscreen/laboursupply/Laboursupply';
 import Calendarcomponent from '../progresscomponents/Calendarcomponent';
+import Searchbar from '../../utils/Searchbar';
+import Addhindrance from '../../screens/cardsrouter/hindrance/Addhindrance';
+import Hindrancedetail from '../../screens/cardsrouter/hindrance/hindrancedetail/Hindrancedetail';
+import Areaofconcerndetail from '../../screens/cardsrouter/areaofconcern/areaofconcerndetail/Areaofconcerndetail';
 
 const Tab = createBottomTabNavigator();
 const Toptab = createMaterialTopTabNavigator();
@@ -53,14 +57,33 @@ const Homestack = () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{headerShown: false}}
+        options={{headerShown: false, headerStyle:{
+          borderBottomWidth: 0, // Remove the borderBottom
+              elevation: 0, // Remove elevation shadow (Android only)
+        }}}
       />
-      <Stack.Screen name="Labour Data" component={Labourdata} options={{}} />
-      <Stack.Screen name="Progressdata" component={Progressstack} />
+      <Stack.Screen name="Labour Data" component={Labourdata}  />
+      <Stack.Screen name="Progressdata" component={Progressstack}  options={{
+        header:({navigation})=>{
+          return <View style={{backgroundColor:"white",padding:moderateScale(10),alignItems:"center",flexDirection:"row"}}>
+          <TouchableOpacity  onPress={()=>navigation.goBack()} style={{marginLeft:verticalScale(10),padding:moderateScale(10)}}>
+            <Image source={require('../../assets/Images/backbutton.png')}/>
+          </TouchableOpacity >
+          <Text style={{fontFamily:"Geologica-Bold",color:"black",fontSize:20,marginLeft:verticalScale(30)}}>New Progress</Text>
+          </View>
+        }
+      }}/>
       <Stack.Screen name="De-Snags" component={Desnagstack} />
+
       <Stack.Screen name="Area of Concern" component={AreaofConcernstack} />
-      <Stack.Screen name="AreaofConcern" component={Areaofconcern} />
+      {/* page */}
+      <Stack.Screen name="Area of concern" component={Areaofconcern} />
+      <Stack.Screen name="Area of Concern Detail" component={Areaofconcerndetail} />
       <Stack.Screen name="Hindrance" component={Hindrance} />
+      {/* Page */}
+      <Stack.Screen name="Add Hindrance" component={Addhindrance} />
+      <Stack.Screen name="Hindrance Details" component={Hindrancedetail} />
+
       <Stack.Screen name="Quality Control" component={Qualitystack} />
     </Stack.Navigator>
   );
@@ -68,11 +91,12 @@ const Homestack = () => {
 
 const Addstack = () => {
   return (
-    <Stack.Navigator screenOptions={{
-      headerTitleStyle: {
-        fontFamily: 'Geologica-Medium',
-      },
-    }}>
+    <Stack.Navigator
+      screenOptions={{
+        headerTitleStyle: {
+          fontFamily: 'Geologica-Medium',
+        },
+      }}>
       <Stack.Screen name="Snag" component={Snag} />
       <Stack.Screen name="De-Snag" component={Desnag} />
       <Stack.Screen name="New-progress" component={Innerprogressstack} />
@@ -80,136 +104,210 @@ const Addstack = () => {
   );
 };
 
-
-const Innerprogressstack =()=>{
+const Innerprogressstack = () => {
   return (
     <>
-    <Calendarcomponent/>
-      <Toptab.Navigator
-      screenOptions={{
-        tabBarPressOpacity: 0,
-        tabBarActiveTintColor: 'black',
-        tabBarItemStyle: {width: 130},
-        tabBarStyle: {
-          backgroundColor: 'white',
-          marginTop: verticalScale(10),
-          width: moderateScale(360),
-          alignSelf:"center",
-          borderRadius: moderateScale(30),
-        },
-        tabBarLabelStyle: {fontSize: 11, fontFamily: 'Geologica-SemiBold'},
-        tabBarIndicatorStyle: {
-          backgroundColor: '#ffba4d',
-          height: verticalScale(40),
-          borderRadius: moderateScale(30),
-          width: horizontalScale(130),
-        },
-        tabBarPressColor: null,
-        tabBarScrollEnabled: true,
-      }}>
-      <Toptab.Screen
-        name="Labour Supply"
-        component={Laboursupply}
-        screenOptions={{backgroundColor: 'white'}}
-      />
-      <Toptab.Screen name="PRW" component={PWR} />
-      <Toptab.Screen name="Misc." component={Misc} />
-      </Toptab.Navigator>
-    </>
-  );
-}
-
-// New Progress Top tab
-const Progressstack = () => {
-  return (
-    <Toptab.Navigator
-      screenOptions={{
-        tabBarPressOpacity: 0,
-        tabBarActiveTintColor: 'black',
-        tabBarItemStyle: {width: 115},
-        tabBarStyle: {
-          backgroundColor: 'white',
-          marginTop: verticalScale(10),
-          borderRadius: moderateScale(30),
-        },
-        tabBarLabelStyle: {fontSize: 12, fontFamily: 'Geologica-SemiBold'},
-        tabBarIndicatorStyle: {
-          backgroundColor: '#ffba4d',
-          height: verticalScale(40),
-          borderRadius: moderateScale(30),
-          width: horizontalScale(115),
-        },
-        tabBarPressColor: null,
-        tabBarScrollEnabled: true,
-      }}>
-      <Toptab.Screen
-        name="Completed"
-        component={Completed}
-        screenOptions={{backgroundColor: 'white'}}
-      />
-      <Toptab.Screen name="Ongoing" component={Ongoing} />
-      <Toptab.Screen name="Inquality" component={Inquality} />
-      <Toptab.Screen name="Upcoming" component={Upcoming} />
-    </Toptab.Navigator>
-  );
-};  
-
-// Quality Checklist
-const Qualitystack = () => {
-  return (
-    <View style={{flex: 1,borderWidth:1}}>
+      <Calendarcomponent />
       <Toptab.Navigator
         screenOptions={{
           tabBarPressOpacity: 0,
           tabBarActiveTintColor: 'black',
-          
+          tabBarItemStyle: {width: 125},
           tabBarStyle: {
+            backgroundColor: 'white',
             marginTop: verticalScale(10),
-            borderRadius: moderateScale(30),
-            width: moderateScale(360),
+            width: moderateScale(340),
             alignSelf: 'center',
-            shadowColor: 'transparent',
-            position:"relative",
-            backgroundColor:"transparent",
-            
+            borderRadius: moderateScale(30),
           },
-          tabBarItemStyle:{borderRadius: moderateScale(30),width:120,position:"relative",height:verticalScale(50)},
-          tabBarLabelStyle: {fontSize: 12, fontFamily: 'Geologica-SemiBold',marginBottom:20},
-          
+          tabBarLabelStyle: {fontSize: 11, fontFamily: 'Geologica-SemiBold'},
           tabBarIndicatorStyle: {
             backgroundColor: '#ffba4d',
             height: verticalScale(40),
             borderRadius: moderateScale(30),
-            position: "absolute",
-            top: 0,
-            zIndex:999
           },
           tabBarPressColor: null,
+          tabBarScrollEnabled: true,
         }}>
         <Toptab.Screen
-          name="Closed"
-          
-          component={Closed}
-          options={{
-            tabBarBadge: () => (
-              <View style={{backgroundColor:"black",borderWidth:1,top:35,right:40,zIndex:10, position:"absolute",borderRadius:moderateScale(5)}}>
-              <Text style={{color:"white",fontFamily:"Geologica-Medium",fontSize:11,paddingHorizontal:horizontalScale(6)}} >
-                1000
-              </Text>
-              </View>
-            ),
-          }}
+          name="Labour Supply"
+          component={Laboursupply}
+          screenOptions={{backgroundColor: 'white'}}
         />
-        <Toptab.Screen name="New" component={New} />
-        <Toptab.Screen name="Open" component={Open} options={{
+        <Toptab.Screen name="PRW" component={PWR} />
+        <Toptab.Screen name="Misc." component={Misc} />
+      </Toptab.Navigator>
+    </>
+  );
+};
+
+// New Progress Top tab
+const Progressstack = () => {
+  return (
+    <View style={{ flex: 1}}>
+      <Toptab.Navigator
+        screenOptions={{
+          tabBarPressOpacity: 0,
+          tabBarPressColor: 'white',
+          tabBarActiveTintColor: '#ffba4d',
+          tabBarInactiveTintColor: 'white',
+          tabBarScrollEnabled:true,
+          tabBarStyle: {
+            backgroundColor: 'white',
+            height: 85,
+            width:450,
+            borderRadius: 0,
+            elevation: 0,
+            alignContent:"center",
+            justifyContent:"center",
+            paddingHorizontal:horizontalScale(10),
+            
+          },
+          tabBarItemStyle: { width: 100, padding: 5,height:60},
+          tabBarContentContainerStyle: {  flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, width: '100%' },
+          tabBarIndicatorStyle: { height: 0 },
+        }}
+      >
+        <Toptab.Screen
+          name="Completed"
+          options={{
+            tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Completed'} 
+              />,
             tabBarBadge: () => (
-              <View style={{backgroundColor:"black",borderWidth:1,top:35,right:40,zIndex:10, position:"absolute",borderRadius:moderateScale(5)}}>
-              <Text style={{color:"white",fontFamily:"Geologica-Medium",fontSize:11,paddingHorizontal:horizontalScale(6)}} >
+            <View style={{ backgroundColor:'black',  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
                 1000
               </Text>
-              </View>
-            ),
-          }} />
+            </View>
+          ),
+            
+          }}
+          component={Completed}
+        />
+        <Toptab.Screen name="Ongoing" component={Ongoing} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Ongoing'} tabBarScrollEnabled={true} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
+        <Toptab.Screen name="Inquality" component={Inquality} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Open'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
+        <Toptab.Screen name="Upcoming" component={Upcoming} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Upcoming'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
+      </Toptab.Navigator>
+    </View>
+  );
+};
+
+
+
+const TitleBadge = ({ color, focused, item }) => {
+  return (
+    <View style={[{
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent:"center",
+      marginTop: -5,
+      paddingHorizontal: 8,
+      paddingVertical: 6,
+      borderRadius: 30,
+      width:100,
+      height:45,
+      elevation:5
+
+    }, { backgroundColor: color }]}>
+      <Text style={[{
+        fontSize: 16,
+        fontFamily: 'Geologica-Medium',
+      }, { color: focused ? 'black' : 'gray' }]}>
+        {item}
+      </Text>
+    </View>
+  );
+};
+
+const Qualitystack = () => {
+  return (
+    <View style={{ flex: 1}}>
+      <Toptab.Navigator
+        screenOptions={{
+         
+          tabBarPressOpacity: 0,
+          tabBarPressColor: 'white',
+          tabBarActiveTintColor: '#ffba4d',
+          tabBarInactiveTintColor: 'white',
+          tabBarStyle: {
+            backgroundColor: 'white',
+            height: 85,
+            borderRadius: 0,
+            elevation: 0,
+            alignContent:"center",
+            justifyContent:"center",
+            paddingHorizontal:horizontalScale(10),
+            
+          },
+          tabBarItemStyle: { width: 100, padding: 5,height:60},
+          tabBarContentContainerStyle: {  flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, width: '100%' },
+          tabBarIndicatorStyle: { height: 0 },
+          tabBarScrollEnabled: true,
+        }}
+      >
+        <Toptab.Screen
+          name="Closed"
+          options={{
+            tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Closed'} 
+              />,
+            tabBarBadge: () => (
+            <View style={{ backgroundColor:'black',  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+            
+          }}
+          component={Closed}
+        />
+        <Toptab.Screen name="New" component={New} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'New'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
+        <Toptab.Screen name="Open" component={Open} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Open'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
       </Toptab.Navigator>
     </View>
   );
@@ -217,32 +315,66 @@ const Qualitystack = () => {
 
 const Desnagstack = () => {
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1}}>
       <Toptab.Navigator
         screenOptions={{
-                    tabBarPressColor: 'false',
-          tabBarActiveTintColor: 'black',
+         
+          tabBarPressOpacity: 0,
+          tabBarPressColor: 'white',
+          tabBarActiveTintColor: '#ffba4d',
+          tabBarInactiveTintColor: 'white',
           tabBarStyle: {
-            backgroundColor: '#f3f5f8',
-            marginTop: verticalScale(20),
-            borderRadius: moderateScale(30),
-            width: moderateScale(360),
-            alignSelf: 'center',
+            backgroundColor: 'white',
+            height: 85,
+            borderRadius: 0,
+            elevation: 0,
+            alignContent:"center",
+            justifyContent:"center",
+            paddingHorizontal:horizontalScale(10),
+            
           },
-          tabBarLabelStyle: {fontSize: 12, fontFamily: 'Geologica-SemiBold'},
-          tabBarIndicatorStyle: {
-            backgroundColor: '#ffba4d',
-            height: verticalScale(40),
-            borderRadius: moderateScale(30),
-          },
-        }}>
+          tabBarItemStyle: { width: 100, padding: 5,height:60},
+          tabBarContentContainerStyle: {  flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, width: '100%' },
+          tabBarIndicatorStyle: { height: 0 },
+          tabBarScrollEnabled: true,
+        }}
+      >
         <Toptab.Screen
           name="New"
+          options={{
+            tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'New'} 
+              />,
+            tabBarBadge: () => (
+            <View style={{ backgroundColor:'black',  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+            
+          }}
           component={New}
-          screenOptions={{backgroundColor: 'white'}}
         />
-        <Toptab.Screen name="In review" component={Inreview} />
-        <Toptab.Screen name="Closed" component={Closed} />
+        <Toptab.Screen name="In review" component={Inreview} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Inreview'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
+        <Toptab.Screen name="Closed" component={Closed} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Closed'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
       </Toptab.Navigator>
     </View>
   );
@@ -250,32 +382,66 @@ const Desnagstack = () => {
 
 const AreaofConcernstack = () => {
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1}}>
       <Toptab.Navigator
         screenOptions={{
-          tabBarPressColor: 'false',
-          tabBarActiveTintColor: 'black',
+         
+          tabBarPressOpacity: 0,
+          tabBarPressColor: 'white',
+          tabBarActiveTintColor: '#ffba4d',
+          tabBarInactiveTintColor: 'white',
           tabBarStyle: {
             backgroundColor: 'white',
-            marginTop: verticalScale(20),
-            borderRadius: moderateScale(30),
-            width: moderateScale(360),
-            alignSelf: 'center',
+            height: 85,
+            borderRadius: 0,
+            elevation: 0,
+            alignContent:"center",
+            justifyContent:"center",
+            paddingHorizontal:horizontalScale(10),
+            
           },
-          tabBarLabelStyle: {fontSize: 12, fontFamily: 'Geologica-SemiBold'},
-          tabBarIndicatorStyle: {
-            backgroundColor: '#ffba4d',
-            height: verticalScale(40),
-            borderRadius: moderateScale(30),
-          },
-        }}>
+          tabBarItemStyle: { width: 100, padding: 5,height:60},
+          tabBarContentContainerStyle: {  flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, width: '100%' },
+          tabBarIndicatorStyle: { height: 0 },
+          tabBarScrollEnabled: true,
+        }}
+      >
         <Toptab.Screen
           name="Read"
+          options={{
+            tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Read'} 
+              />,
+            tabBarBadge: () => (
+            <View style={{ backgroundColor:'black',  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+            
+          }}
           component={Read}
-          screenOptions={{backgroundColor: 'white'}}
         />
-        <Toptab.Screen name="Pending" component={Pending} />
-        <Toptab.Screen name="Approved" component={Approved} />
+        <Toptab.Screen name="Pending" component={Pending} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Pending'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
+        <Toptab.Screen name="Approved" component={Approved} options={{
+          tabBarLabel: ({ color, focused }) => <TitleBadge color={color} focused={focused} item={'Approved'} />,
+          tabBarBadge: () => (
+            <View style={{ backgroundColor: "black",  top: 40, right: 30, zIndex: 10, position: "absolute", borderRadius: moderateScale(5) }}>
+              <Text style={{ color: "white", fontFamily: "Geologica-Medium", fontSize: 11, paddingHorizontal: horizontalScale(6) }} >
+                1000
+              </Text>
+            </View>
+          ),
+        }} />
       </Toptab.Navigator>
     </View>
   );

@@ -6,7 +6,7 @@ import { moderateScale, verticalScale } from '../../../assets/Dimension'
 
 const Ongoing = () => {
   return (
-    <View style={{flex:1,marginTop:verticalScale(15),padding:moderateScale(20),backgroundColor:"white"}}>
+    <View style={{flex:1,padding:moderateScale(20),backgroundColor:"white"}}>
     <Searchbar/>
     <ScrollView showsVerticalScrollIndicator={false}>
     <Cardcomponent/>

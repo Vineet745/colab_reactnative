@@ -1,11 +1,14 @@
-import { View, Text } from 'react-native'
+import { View, Text,TouchableOpacity } from 'react-native'
 import React from 'react'
 import hindrancecardstyle from './hindrancecardstyle'
 import { verticalScale } from '../../../assets/Dimension'
+import { useNavigation } from '@react-navigation/native'
 
 const Hindrancecard = () => {
+  const {navigate} = useNavigation()
   return (
     <View style={{marginBottom: verticalScale(15)}}>
+      <TouchableOpacity onPress={()=>navigate('homestack',{screen:'Hindrance Details'})}>
       <View style={hindrancecardstyle.desnagcard}>
         <View style={hindrancecardstyle.workingareaview}>
           <Text style={hindrancecardstyle.workingareatext}>
@@ -32,6 +35,7 @@ const Hindrancecard = () => {
           <Text style={hindrancecardstyle.creatornametext2}>2000</Text>
         </View>
       </View>
+      </TouchableOpacity>
     </View>
   )
 }
